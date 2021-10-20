@@ -1,0 +1,22 @@
+.wrapper
+{
+    background: rgb(226, 216, 216);
+}
+
+
+h1
+{
+    text-align: center;
+    background: coral;
+}
+
+ul
+{
+    text-align: center;
+}
+
+li
+{
+    display: inline-block;
+}
+
