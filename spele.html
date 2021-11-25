@@ -84,12 +84,24 @@
         function veikt_gajienu(laukums) 
         {
             let atverts_jauns_laukums = false
-            
-            console.log(laukums)
+            if(atvertie_laukumi.indexOf(laukums) == -1)
+            {
+                atverts_jauns_laukums = true
+            }
+            else
+            {
+                atverts_jauns_laukums = false
+            }
+
+            console.log(atverts_jauns_laukums)
 
 
+            if(atverts_jauns_laukums)
+            {
+                document.querySelector('#'+laukums+' div').style.display="block"
+                pedejie_divi.push(laukums)               
+            }
 
-            document.querySelector('#'+laukums+' div').style.display="block"
 
             atvertie_laukumi.push(laukums)
 
