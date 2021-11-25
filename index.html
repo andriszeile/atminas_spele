@@ -47,6 +47,19 @@
         <div class="content">
             <h3 class="virsraksts">Noteikumu teksts</h3><!--class vietā var lietot id, id noder vienai reizei, class vairākām-->
 
+            Vārds: <input id="vards" />
+            <br />
+            Vecums: <input id="vecums" />
+            <br />
+            Reģions:<select id="regions">
+                <option value="Vidzeme">Vidzeme</option>
+                <option value="Latgale">Latgale</option>
+                <option value="Kurzeme">Kurzeme</option>
+                <option value="Zemgale">Zemgale</option>
+            </select>
+
+            <button onclick="sakt_speli()">Sākt</button>
+
 
 
         </div>
@@ -56,6 +69,26 @@
 
 
 <script>
+    function sakt_speli() {
+        let vards = document.querySelector("#vards").value
+        let vecums = document.querySelector("#vecums").value
+        let regions = document.querySelector("#regions").value
+
+
+        console.log(regions)
+        if(vards == "")
+        {
+            alert("Ievadi vārdu!")
+        }
+        else
+        {
+            window.location="spele.html#"+vards+","+vecums+","+regions
+        }
+    }//beidzas skat_speli()
+
+
+
+
     /*
     let vards
     const valsts = "Latvija"
