@@ -102,8 +102,33 @@
                 pedejie_divi.push(laukums)               
             }
 
+            if(pedejie_divi.length == 2)
+            {
+                let atverts1 = pedejie_divi[0].replace('L','')
+                let atverts2 = pedejie_divi[1].replace('L','')
+                atverts1 = parseInt(atverts1,10)
+                atverts2 = parseInt(atverts2,10)
+                
+                if(laukumu_saturs[atverts1] == laukumu_saturs[atverts2])
+                {
+                    console.log("atvērti vienādi")
+                    atvertie_laukumi.push(pedejie_divi[0],pedejie_divi[1])
+                }
+                else
+                {
+                    console.log("atvētri 2 dažādi")
+                    document.querySelector('#'+pedejie_divi[0]+' div').style.display='none'
+                    document.querySelector('#'+pedejie_divi[1]+' div').style.display='none'
+                }
 
-            atvertie_laukumi.push(laukums)
+                pedejie_divi = []
+                
+                
+
+            }
+
+
+            
 
             if(laukumu_saturs.length == atvertie_laukumi.length)
             {
