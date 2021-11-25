@@ -45,16 +45,28 @@
 
         </div><!--beidzas header-->
         <div class="content">
-            <p>Noteikumu teksts</p>
+            <h3 class="virsraksts">Sveiks </h3>
 
 
             <div class="game">
-                <div class="block">😁</div>
-                <div class="block">🤪</div>
-                <div class="block">🤓</div>
-                <div class="block">😁</div>
-                <div class="block">🤓</div>
-                <div class="block">🤪</div>
+                <div class="block" id="L0" onclick="veikt_gajienu('L0')">
+                    <div>😁</div>
+                </div>
+                <div class="block" id="L1" onclick="veikt_gajienu('L1')">
+                    <div>🤪</div>
+                </div>
+                <div class="block" id="L2" onclick="veikt_gajienu('L2')">
+                    <div>🤓</div>
+                </div>
+                <div class="block" id="L3" onclick="veikt_gajienu('L3')">
+                    <div>😁</div>
+                </div>
+                <div class="block" id="L4" onclick="veikt_gajienu('L4')">
+                    <div>🤓</div>
+                </div>
+                <div class="block" id="L5" onclick="veikt_gajienu('L5')">
+                    <div>🤪</div>
+                </div>
 
 
             </div>
@@ -62,6 +74,37 @@
 
     </div><!--beidzas wrapper-->
 
+    <script>
+
+        let laukumu_saturs = ['😁','🤪','🤓','😁','🤓','🤪']
+
+        let atvertie_laukumi = []
+        let pedejie_divi = []
+
+        function veikt_gajienu(laukums) 
+        {
+            let atverts_jauns_laukums = false
+            
+            console.log(laukums)
+
+
+
+            document.querySelector('#'+laukums+' div').style.display="block"
+
+            atvertie_laukumi.push(laukums)
+
+            if(laukumu_saturs.length == atvertie_laukumi.length)
+            {
+                alert("Apsveicam!")
+            }
+
+            
+        }
+
+
+
+
+    </script>
 
 
 

@@ -33,5 +33,13 @@ li
     background: crimson;
     width: 100px;
     height: 100px;
-    border:1px solid rgb(61, 34, 34)
+    border:1px solid rgb(61, 34, 34);
+    text-align: center;
+    margin: 5px;
+    font-size: 45px
+}
+
+.block div
+{
+    display: none;
 }
