@@ -1,18 +1,23 @@
 .wrapper
 {
-    background: rgb(226, 216, 216);
+    background:#E8E8E8;
+	padding: 10px;
+	width: 600px;       /*➕*/
+	margin-left: auto;  /*➕*/
+	margin-right: auto; /*➕*/
 }
-
 
 h1
 {
     text-align: center;
-    background: coral;
+    background:#5BBCFF;
+	padding: 5px;       /*➕*/
 }
 
 ul
 {
     text-align: center;
+	padding: 0px; /*➕*/
 }
 
 li
@@ -24,8 +29,10 @@ li
 {
     width: 350px;
     background: black;
+	text-align: center;  /*➕*/
+	margin-left: auto;   /*➕*/
+	margin-right: auto;  /*➕*/
 }
-
 
 .block
 {
@@ -33,13 +40,15 @@ li
     background: crimson;
     width: 100px;
     height: 100px;
-    border:1px solid rgb(61, 34, 34);
-    text-align: center;
-    margin: 5px;
-    font-size: 45px
+    border:1px solid rgb(116, 1, 1);
+	text-align: center;  /*➕*/
+	margin:5px;          /*➕*/
+	font-size: 45px;     /*➕*/
+    vertical-align: top;
 }
 
 .block div
 {
-    display: none;
+    display:none;
 }
+

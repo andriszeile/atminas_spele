@@ -9,82 +9,80 @@
 </head>
 <body>
     
-
     <div class="wrapper">
+        
         <div class="header">
             <h1>
                 <a href="index.html">
-                    Atmiņas spēle
+                Atmiņas spēle
                 </a>
             </h1>
 
             <ul>
                 <li>
                     <a href="spele.html">
-                        Spēle
+                    Spēle
                     </a>
                 </li>
                 <li>
                     <a href="pspele.html">
-                        Pielāgota spēle
+                    Pielāgota Spēle
                     </a>
                 </li>
                 <li>
                     <a href="top.html">
-                        Tops
+                    Tops
                     </a>
-                </li> 
+                </li>
                 <li>
                     <a href="par.html">
-                        Par autoru
+                    Par autoru
                     </a>
-                </li>                               
-
-            </ul><!--beidzas saraksts-->
-
-
+                </li>
+            </ul>
         </div><!--beidzas header-->
+
         <div class="content">
-            <h3 class="virsraksts">Noteikumu teksts</h3><!--class vietā var lietot id, id noder vienai reizei, class vairākām-->
+            <h3 class="virsraksts">Noteikumu teksts</h3>
 
             Vārds: <input id="vards" />
             <br />
             Vecums: <input id="vecums" />
             <br />
-            Reģions:<select id="regions">
+            Reģions:
+            <select id="regions">
                 <option value="Vidzeme">Vidzeme</option>
                 <option value="Latgale">Latgale</option>
                 <option value="Kurzeme">Kurzeme</option>
-                <option value="Zemgale">Zemgale</option>
             </select>
 
-            <button onclick="sakt_speli()">Sākt</button>
-
-
-
+            <button onclick="saktSpeli()">Sākt</button>
+            
         </div>
 
     </div><!--beidzas wrapper-->
 
-
-
 <script>
-    function sakt_speli() {
-        let vards = document.querySelector("#vards").value
-        let vecums = document.querySelector("#vecums").value
-        let regions = document.querySelector("#regions").value
 
-
+    function saktSpeli() 
+    {
+        let vards   = document.querySelector('#vards').value
+        let vecums  = document.querySelector('#vecums').value
+        let regions = document.querySelector('#regions').value
+        
         console.log(regions)
-        if(vards == "")
+
+        if( vards=='' )
         {
-            alert("Ievadi vārdu!")
+            alert('Ievadi vārdu!')
         }
         else
         {
-            window.location="spele.html#"+vards+","+vecums+","+regions
+            window.location='spele.html#'+vards+','+vecums+','+regions
         }
-    }//beidzas skat_speli()
+
+    }//beidzas saktSpeli()
+
 
 
 
@@ -93,37 +91,29 @@
     let vards
     const valsts = "Latvija"
     vards = "Laura"
-    let punkti = 100
     let vards2 = `Pēteris ir
-labais!!!`
-    10+30
-    vards2+" Punkti:"+punkti
-    let klase = ["Jānis", "Laura", "Jana"]
+    labais!!!`
+    let klase = ['Jānis','Laura','Jana']
+    klase[3] = 'Uģis'
     let skolens = {
-    	vards:'Janis',
-    	vecums:16,
-    	'patīk datori':'jā'
+       vards:'Jānis',
+       vecums:16,
+       'patīk datori':'jā' 
     }
-
     skolens['vards']
-
     let json = [
         {
-            vards:'Janis',
-            vecums:16
+         vards:'Jānis',
+         vecums:16   
         },
         {
-            vards:'Jana',
-            vecums:17
+         vards:'Jana',
+         vecums:17   
         }
     ]
-
-console.log('beigas ir')
-document.querySelector(".virsraksts").innerHTML = "Vārds: "+ vards //. lieto class gadījumā, # id gadījumā
-*/
-
-
-
+    console.log('beigas ir')
+    document.querySelector('.virsraksts').innerHTML = 'Vārds:'+vards
+    */
 </script>
     
 </body>

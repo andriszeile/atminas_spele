@@ -9,142 +9,70 @@
 </head>
 <body>
     
-
     <div class="wrapper">
+        
         <div class="header">
             <h1>
                 <a href="index.html">
-                    Atmiņas spēle
+                Atmiņas spēle
                 </a>
             </h1>
 
             <ul>
                 <li>
                     <a href="spele.html">
-                        Spēle
+                    Spēle
                     </a>
                 </li>
                 <li>
                     <a href="pspele.html">
-                        Pielāgota spēle
+                    Pielāgota Spēle
                     </a>
                 </li>
                 <li>
                     <a href="top.html">
-                        Tops
+                    Tops
                     </a>
-                </li> 
+                </li>
                 <li>
                     <a href="par.html">
-                        Par autoru
+                    Par autoru
                     </a>
-                </li>                               
-
-            </ul><!--beidzas saraksts-->
-
-
+                </li>
+            </ul>
         </div><!--beidzas header-->
+
         <div class="content">
             <h3 class="virsraksts">Sveiks </h3>
 
-
             <div class="game">
-                <div class="block" id="L0" onclick="veikt_gajienu('L0')">
-                    <div>😁</div>
+                <div class="block" id="L0" onclick="veiktGajienu('L0')">
+                    <div>😃</div>
                 </div>
-                <div class="block" id="L1" onclick="veikt_gajienu('L1')">
-                    <div>🤪</div>
+                <div class="block" id="L1" onclick="veiktGajienu('L1')">
+                    <div>😎</div>
                 </div>
-                <div class="block" id="L2" onclick="veikt_gajienu('L2')">
-                    <div>🤓</div>
+                <div class="block" id="L2" onclick="veiktGajienu('L2')">
+                    <div>🥳</div>
                 </div>
-                <div class="block" id="L3" onclick="veikt_gajienu('L3')">
-                    <div>😁</div>
+                <div class="block" id="L3" onclick="veiktGajienu('L3')">
+                    <div>😃</div>
                 </div>
-                <div class="block" id="L4" onclick="veikt_gajienu('L4')">
-                    <div>🤓</div>
+                <div class="block" id="L4" onclick="veiktGajienu('L4')">
+                    <div>🥳</div>
                 </div>
-                <div class="block" id="L5" onclick="veikt_gajienu('L5')">
-                    <div>🤪</div>
+                <div class="block" id="L5" onclick="veiktGajienu('L5')">
+                    <div>😎</div>
                 </div>
-
-
             </div>
         </div>
 
     </div><!--beidzas wrapper-->
 
-    <script>
-
-        let laukumu_saturs = ['😁','🤪','🤓','😁','🤓','🤪']
-
-        let atvertie_laukumi = []
-        let pedejie_divi = []
-
-        function veikt_gajienu(laukums) 
-        {
-            let atverts_jauns_laukums = false
-            if(atvertie_laukumi.indexOf(laukums) == -1)
-            {
-                atverts_jauns_laukums = true
-            }
-            else
-            {
-                atverts_jauns_laukums = false
-            }
-
-            console.log(atverts_jauns_laukums)
+<script src="script_spele.js">
 
 
-            if(atverts_jauns_laukums)
-            {
-                document.querySelector('#'+laukums+' div').style.display="block"
-                pedejie_divi.push(laukums)               
-            }
+</script>
 
-            if(pedejie_divi.length == 2)
-            {
-                let atverts1 = pedejie_divi[0].replace('L','')
-                let atverts2 = pedejie_divi[1].replace('L','')
-                atverts1 = parseInt(atverts1,10)
-                atverts2 = parseInt(atverts2,10)
-                
-                if(laukumu_saturs[atverts1] == laukumu_saturs[atverts2])
-                {
-                    console.log("atvērti vienādi")
-                    atvertie_laukumi.push(pedejie_divi[0],pedejie_divi[1])
-                }
-                else
-                {
-                    console.log("atvētri 2 dažādi")
-                    document.querySelector('#'+pedejie_divi[0]+' div').style.display='none'
-                    document.querySelector('#'+pedejie_divi[1]+' div').style.display='none'
-                }
-
-                pedejie_divi = []
-                
-                
-
-            }
-
-
-            
-
-            if(laukumu_saturs.length == atvertie_laukumi.length)
-            {
-                alert("Apsveicam!")
-            }
-
-            
-        }
-
-
-
-
-    </script>
-
-
-
-    
 </body>
 </html>
